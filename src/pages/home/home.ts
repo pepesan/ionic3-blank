@@ -21,5 +21,8 @@ export class HomePage {
   navigateAbout() {
     this.navCtrl.push('about')
   }
+  navigateListado() {
+    this.navCtrl.push('listado')
+  }
 
 }
