@@ -21,7 +21,7 @@ import 'rxjs/add/operator/map';
 })
 export class InfinitePage {
   private apiUrl = 'https://reqres.in/api/';
-  page;
+  page = 0;
   data;
   usuarios ;
   perPage;
@@ -32,7 +32,7 @@ export class InfinitePage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public http: HttpClient) {
-    this.getUsers(1).subscribe(
+    this.getUsers(this.page).subscribe(
       res => {
         console.log(res);
 
@@ -50,7 +50,7 @@ export class InfinitePage {
     console.log('ionViewDidLoad InfinitePage');
   }
   getUsers(page) {
-    return this.http.get(this.apiUrl+"users?page="+page)
+    return this.http.get(this.apiUrl+"users?page="+page+"&per_page=10")
       .catch(this.handleError);
   }
   private handleError (error: Response | any) {
