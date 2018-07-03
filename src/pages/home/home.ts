@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import {AboutPage} from "../about/about";
+import { ModalController } from 'ionic-angular';
 
 @IonicPage({
   name: 'home',
@@ -12,7 +13,8 @@ import {AboutPage} from "../about/about";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              public modalCtrl : ModalController) {
 
   }
   goAbout(){
@@ -23,6 +25,11 @@ export class HomePage {
   }
   navigateListado() {
     this.navCtrl.push('listado')
+  }
+  presentModal() {
+    var data = { message : 'hello world' };
+    var modalPage = this.modalCtrl.create('ModalPage',data);
+    modalPage.present();
   }
 
 }

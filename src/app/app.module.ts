@@ -9,6 +9,7 @@ import {AboutPageModule} from "../pages/about/about.module";
 import {HomePageModule} from "../pages/home/home.module";
 import {ListadoPageModule} from "../pages/listado/listado.module";
 import {ItemDetailPageModule} from "../pages/item-detail/item-detail.module";
+import {ModalPageModule} from "../pages/modal/modal.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {ItemDetailPageModule} from "../pages/item-detail/item-detail.module";
     AboutPageModule,
     HomePageModule,
     ListadoPageModule,
-    ItemDetailPageModule
+    ItemDetailPageModule,
+    ModalPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
