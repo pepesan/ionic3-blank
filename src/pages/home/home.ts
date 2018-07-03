@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import {AboutPage} from "../about/about";
 
+@IonicPage({
+  name: 'home',
+  segment: 'home'
+})
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,6 +17,9 @@ export class HomePage {
   }
   goAbout(){
     this.navCtrl.push(AboutPage)
+  }
+  navigateAbout() {
+    this.navCtrl.push('about')
   }
 
 }

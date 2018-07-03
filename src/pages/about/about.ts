@@ -8,7 +8,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'about',
+  segment: 'about'
+})
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html',
@@ -23,6 +26,9 @@ export class AboutPage {
   }
   goBack(){
     this.navCtrl.pop()
+  }
+  navigateBack() {
+    this.navCtrl.push('home')
   }
 
 }
