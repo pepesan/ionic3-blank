@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import {AboutPage} from "../about/about";
-import { ModalController } from 'ionic-angular';
+import { ModalController, ActionSheetController } from 'ionic-angular';
 
 @IonicPage({
   name: 'home',
@@ -14,7 +14,8 @@ import { ModalController } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController,
-              public modalCtrl : ModalController) {
+              public modalCtrl : ModalController,
+              public actionSheetCtrl: ActionSheetController) {
 
   }
   goAbout(){
@@ -37,6 +38,33 @@ export class HomePage {
   }
   navigateForm(){
     this.navCtrl.push('form')
+  }
+
+  presentActionSheet() {
+    const actionSheet = this.actionSheetCtrl.create({
+      title: 'Elige una acción',
+      buttons: [
+        {
+          text: 'Destructuva',
+          role: 'destructive',
+          handler: () => {
+            console.log('Destructive clicked');
+          }
+        },{
+          text: 'Archivo',
+          handler: () => {
+            console.log('Archive clicked');
+          }
+        },{
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
   }
 
 }
