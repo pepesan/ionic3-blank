@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -12,6 +13,7 @@ import {ItemDetailPageModule} from "../pages/item-detail/item-detail.module";
 import {ModalPageModule} from "../pages/modal/modal.module";
 import {InfinitePageModule} from "../pages/infinite/infinite.module";
 import { HttpClientModule } from '@angular/common/http';
+import {FormularioPageModule} from "../pages/formulario/formulario.module";
 @NgModule({
   declarations: [
     MyApp
@@ -25,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     ItemDetailPageModule,
     ModalPageModule,
     InfinitePageModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    FormularioPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -35,5 +35,8 @@ export class HomePage {
   navigateInfinite() {
     this.navCtrl.push('infinite')
   }
+  navigateForm(){
+    this.navCtrl.push('form')
+  }
 
 }
