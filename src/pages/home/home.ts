@@ -32,4 +32,8 @@ export class HomePage {
     modalPage.present();
   }
 
+  navigateInfinite() {
+    this.navCtrl.push('infinite')
+  }
+
 }

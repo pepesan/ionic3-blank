@@ -10,7 +10,8 @@ import {HomePageModule} from "../pages/home/home.module";
 import {ListadoPageModule} from "../pages/listado/listado.module";
 import {ItemDetailPageModule} from "../pages/item-detail/item-detail.module";
 import {ModalPageModule} from "../pages/modal/modal.module";
-
+import {InfinitePageModule} from "../pages/infinite/infinite.module";
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     MyApp
@@ -22,7 +23,9 @@ import {ModalPageModule} from "../pages/modal/modal.module";
     HomePageModule,
     ListadoPageModule,
     ItemDetailPageModule,
-    ModalPageModule
+    ModalPageModule,
+    InfinitePageModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
