@@ -14,6 +14,10 @@ import {ModalPageModule} from "../pages/modal/modal.module";
 import {InfinitePageModule} from "../pages/infinite/infinite.module";
 import { HttpClientModule } from '@angular/common/http';
 import {FormularioPageModule} from "../pages/formulario/formulario.module";
+import {GeolocationPageModule} from "../pages/geolocation/geolocation.module";
+import { Geolocation } from '@ionic-native/geolocation';
+import {DevicePageModule} from "../pages/device/device.module";
+import { Device } from '@ionic-native/device';
 @NgModule({
   declarations: [
     MyApp
@@ -29,7 +33,9 @@ import {FormularioPageModule} from "../pages/formulario/formulario.module";
     InfinitePageModule,
     HttpClientModule,
     FormsModule,
-    FormularioPageModule
+    FormularioPageModule,
+    GeolocationPageModule,
+    DevicePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,7 +44,9 @@ import {FormularioPageModule} from "../pages/formulario/formulario.module";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation,
+    Device
   ]
 })
 export class AppModule {}

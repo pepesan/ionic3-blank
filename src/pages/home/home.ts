@@ -39,6 +39,12 @@ export class HomePage {
   navigateForm(){
     this.navCtrl.push('form')
   }
+  navigateGeo(){
+    this.navCtrl.push('geo')
+  }
+  navigateDevice(){
+    this.navCtrl.push('device')
+  }
 
   presentActionSheet() {
     const actionSheet = this.actionSheetCtrl.create({
