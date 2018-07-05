@@ -14,10 +14,14 @@ import {ModalPageModule} from "../pages/modal/modal.module";
 import {InfinitePageModule} from "../pages/infinite/infinite.module";
 import { HttpClientModule } from '@angular/common/http';
 import {FormularioPageModule} from "../pages/formulario/formulario.module";
+import {GridPageModule} from "../pages/grid/grid.module";
 import {GeolocationPageModule} from "../pages/geolocation/geolocation.module";
 import { Geolocation } from '@ionic-native/geolocation';
 import {DevicePageModule} from "../pages/device/device.module";
 import { Device } from '@ionic-native/device';
+import {CameraPageModule} from "../pages/camera/camera.module";
+import { Camera } from '@ionic-native/camera';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 @NgModule({
   declarations: [
     MyApp
@@ -35,7 +39,9 @@ import { Device } from '@ionic-native/device';
     FormsModule,
     FormularioPageModule,
     GeolocationPageModule,
-    DevicePageModule
+    DevicePageModule,
+    CameraPageModule,
+    GridPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +52,9 @@ import { Device } from '@ionic-native/device';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    Device
+    Device,
+    Camera,
+    AndroidPermissions
   ]
 })
 export class AppModule {}

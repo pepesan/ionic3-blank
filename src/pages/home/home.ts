@@ -39,11 +39,17 @@ export class HomePage {
   navigateForm(){
     this.navCtrl.push('form')
   }
+  navigateGrid(){
+    this.navCtrl.push('grid')
+  }
   navigateGeo(){
     this.navCtrl.push('geo')
   }
   navigateDevice(){
     this.navCtrl.push('device')
+  }
+  navigateCamera(){
+    this.navCtrl.push('camera')
   }
 
   presentActionSheet() {

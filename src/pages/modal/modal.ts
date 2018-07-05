@@ -15,7 +15,9 @@ import { ViewController } from 'ionic-angular';
 })
 export class ModalPage {
 
-  constructor(public navCtrl: NavController,  public viewCtrl : ViewController ,public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public viewCtrl : ViewController ,
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
