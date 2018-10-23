@@ -19,7 +19,7 @@ import {GeolocationPageModule} from "../pages/geolocation/geolocation.module";
 import { Geolocation } from '@ionic-native/geolocation';
 import {DevicePageModule} from "../pages/device/device.module";
 import { Device } from '@ionic-native/device';
-import {CameraPageModule} from "../pages/camera/camera.module";
+//import {CameraPageModule} from "../pages/camera/camera.module";
 import { Camera } from '@ionic-native/camera';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 @NgModule({
@@ -40,7 +40,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     FormularioPageModule,
     GeolocationPageModule,
     DevicePageModule,
-    CameraPageModule,
+    //CameraPageModule,
     GridPageModule
   ],
   bootstrap: [IonicApp],
